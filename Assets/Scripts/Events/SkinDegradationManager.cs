@@ -7,16 +7,19 @@ public class SkinDegradationManager : MonoBehaviour
     public Texture2D stageOne, stageTwo, stageThree;    
     private int currentStage;
     public static Action onDie;
+    private void Start() {
+        skinMaterial.SetTexture("_BaseMap", stageOne); 
+    }
     private void OnEnable() {
-        Event.onEndEvent += stateParam => {if(stateParam == EndState.failure) DegradeSkin();};
+        EventTrigger.onEndEvent += stateParam => {if(stateParam == EndState.failure) DegradeSkin();};
     }
 
     private void OnDisable() {
-        Event.onEndEvent -= stateParam => {if(stateParam == EndState.failure) DegradeSkin();};
+        EventTrigger.onEndEvent -= stateParam => {if(stateParam == EndState.failure) DegradeSkin();};
     }
 
     private void DegradeSkin()
-    {
+    {        
         if(currentStage == 2)
         {
             onDie?.Invoke();
@@ -26,10 +29,10 @@ public class SkinDegradationManager : MonoBehaviour
         switch(currentStage)
         {
             case 1:
-                skinMaterial.SetTexture("_MainTex", stageTwo);
+                skinMaterial.SetTexture("_BaseMap", stageTwo); 
                 break;
             case 2:
-                skinMaterial.SetTexture("_MainTex", stageThree);
+                skinMaterial.SetTexture("_BaseMap", stageThree); 
                 break;
         }
     }

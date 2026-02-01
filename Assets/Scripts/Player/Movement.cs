@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using DG.Tweening;
 using System;
 using System.Collections.Generic;
+using System.Collections;
 
 public class Movement : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Movement : MonoBehaviour
     private static Vector3 currentPosition;
     public static Vector3 Position => currentPosition;
     public static Vector3 currentForwardsDir;
+    public static Vector3 currentRightDir;
     private void Awake()
     {
         inputActions = new PlayerInputActions();    
@@ -33,11 +35,17 @@ public class Movement : MonoBehaviour
     {
         inputActions.Player.Enable();
         inputActions.Player.Move.performed += OnMovePerformed;    
-        Event.onEndEvent += _ => inputActions.Player.Enable();    
+        EventTrigger.onEndEvent += _ => StartCoroutine(EnableInputsCoroutine());    
     }
     void OnDisable()
     {
         inputActions.Player.Move.performed -= OnMovePerformed;
+        EventTrigger.onEndEvent -= _ => StartCoroutine(EnableInputsCoroutine());    
+    }
+    private IEnumerator EnableInputsCoroutine()
+    {
+        yield return new WaitForSeconds(1.5f);
+        inputActions.Player.Enable();   
     }
 
     private void OnMovePerformed(InputAction.CallbackContext context)
@@ -80,6 +88,7 @@ public class Movement : MonoBehaviour
     {
         currentPosition = transform.position;
         currentForwardsDir = transform.forward;
+        currentRightDir = transform.right;
         List<MoveDirection> availableDirections = new List<MoveDirection>();
 
         if(IsValidDirection(transform.forward)) availableDirections.Add(MoveDirection.forward);
