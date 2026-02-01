@@ -32,7 +32,8 @@ public class Movement : MonoBehaviour
     private void OnEnable()
     {
         inputActions.Player.Enable();
-        inputActions.Player.Move.performed += OnMovePerformed;        
+        inputActions.Player.Move.performed += OnMovePerformed;    
+        Event.onEndEvent += _ => inputActions.Player.Enable();    
     }
     void OnDisable()
     {

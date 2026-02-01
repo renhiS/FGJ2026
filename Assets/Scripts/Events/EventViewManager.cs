@@ -10,9 +10,11 @@ public class EventViewManager : MonoBehaviour
 
     private void OnEnable() {
         EventTrigger.onEventTriggered += _ => StartEvent();
+        Event.onEndEvent += _ => EndEvent();
     }
     private void OnDisable() {
         EventTrigger.onEventTriggered -= _ => StartEvent();
+        Event.onEndEvent -= _ => EndEvent();
     }
     private void StartEvent()
     {

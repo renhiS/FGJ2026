@@ -22,7 +22,7 @@ public class EventTrigger : MonoBehaviour
         StartCoroutine(TriggerEvent());
     }
 
-    private IEnumerator TriggerEvent()
+    public virtual IEnumerator TriggerEvent()
     {
         yield return new WaitForEndOfFrame();
         
