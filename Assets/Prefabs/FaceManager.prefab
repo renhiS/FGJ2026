@@ -1,0 +1,374 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8799331657185901786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5483381728315041204}
+  - component: {fileID: 2455124914176802670}
+  - component: {fileID: 1134582417644692660}
+  - component: {fileID: 6165156031385485731}
+  - component: {fileID: 2623337604092919563}
+  m_Layer: 0
+  m_Name: FaceManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5483381728315041204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8799331657185901786}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.72044, y: -3.72588, z: 20.66078}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2455124914176802670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8799331657185901786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c652a2b504e47b98149fcab59dd02e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FaceMoveHelper
+  faceBlend: {fileID: 0}
+  faceChecker: {fileID: 6165156031385485731}
+--- !u!114 &1134582417644692660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8799331657185901786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2142719c3690d455e934dbaaf80aafe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FaceController
+  playerInput: {fileID: 2623337604092919563}
+  faceMove: {fileID: 2455124914176802670}
+  inputPaths:
+  - Face/LeftStick
+  - Face/RightStick
+  - Face/Eyebrow outer
+  - Face/Eyebrow Inner
+  - Face/Eyelids
+  - Face/Eyes
+  - Face/Open Mouth
+  - Face/Shrug
+  - Face/Nod
+  - Face/Head shake
+  isActive: 0
+  inputActions: []
+  activeModifiers: 
+  emotesActions: []
+--- !u!114 &6165156031385485731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8799331657185901786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115d61950398749aaa30917c1924d951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FaceChecker
+  faceEvents:
+  - eventName: Janitor
+    acceptableRanges:
+    - blendName: Mouth Ups
+      leftRanges: {x: 0.1, y: 0.5}
+      rightRanges: {x: 0.1, y: 0.5}
+      succeededCheck: 0
+    - blendName: Mouth Sides
+      leftRanges: {x: -0.1, y: 0.5}
+      rightRanges: {x: -0.1, y: 0.5}
+      succeededCheck: 0
+    requiredEmote: 0
+    isGood: 0
+  - eventName: Patient
+    acceptableRanges:
+    - blendName: Mouth Ups
+      leftRanges: {x: -0.1, y: -0.5}
+      rightRanges: {x: -0.1, y: -0.5}
+      succeededCheck: 0
+    - blendName: Mouth Sides
+      leftRanges: {x: 0, y: 0.5}
+      rightRanges: {x: 0, y: 0.5}
+      succeededCheck: 0
+    requiredEmote: 2
+    isGood: 0
+  - eventName: Nurse (female)
+    acceptableRanges:
+    - blendName: Mouth Ups
+      leftRanges: {x: 0.1, y: 0.5}
+      rightRanges: {x: 0.1, y: 0.5}
+      succeededCheck: 0
+    - blendName: Mouth Sides
+      leftRanges: {x: 0, y: 0.5}
+      rightRanges: {x: 0, y: 0.5}
+      succeededCheck: 0
+    requiredEmote: 2
+    isGood: 0
+  - eventName: Nurse (male)
+    acceptableRanges:
+    - blendName: Mouth Ups
+      leftRanges: {x: 0.1, y: 0.5}
+      rightRanges: {x: -0.1, y: 0.1}
+      succeededCheck: 0
+    - blendName: Mouth Ups
+      leftRanges: {x: -0.1, y: 0.1}
+      rightRanges: {x: 0.1, y: 0.5}
+      succeededCheck: 0
+    - blendName: Mouth Sides
+      leftRanges: {x: 0, y: 0.5}
+      rightRanges: {x: 0, y: 0.5}
+      succeededCheck: 0
+    - blendName: Eye sides
+      leftRanges: {x: -1, y: -0.9}
+      rightRanges: {x: 0.8, y: 1}
+      succeededCheck: 0
+    - blendName: Eye sides
+      leftRanges: {x: 0.8, y: 1}
+      rightRanges: {x: -1, y: -0.8}
+      succeededCheck: 0
+    - blendName: Eye sides
+      leftRanges: {x: -1, y: -0.8}
+      rightRanges: {x: 0.8, y: 1}
+      succeededCheck: 0
+    requiredEmote: 2
+    isGood: 0
+  - eventName: Security Guard
+    acceptableRanges:
+    - blendName: Brow Outer Ups
+      leftRanges: {x: 0.1, y: 0.3}
+      rightRanges: {x: 0.1, y: 0.3}
+      succeededCheck: 0
+    - blendName: Brow Inner Ups
+      leftRanges: {x: 0.2, y: 0.6}
+      rightRanges: {x: 0.2, y: 0.6}
+      succeededCheck: 0
+    - blendName: Eyelid
+      leftRanges: {x: -0.9, y: -0.4}
+      rightRanges: {x: -0.9, y: -0.4}
+      succeededCheck: 0
+    - blendName: Mouth
+      leftRanges: {x: 1, y: 1}
+      rightRanges: {x: 1, y: 1}
+      succeededCheck: 0
+    requiredEmote: 1
+    isGood: 0
+  - eventName: Doctor
+    acceptableRanges:
+    - blendName: Mouth Ups
+      leftRanges: {x: 0.1, y: 0.4}
+      rightRanges: {x: 0.1, y: 0.4}
+      succeededCheck: 0
+    - blendName: Mouth sides
+      leftRanges: {x: 0, y: 0.4}
+      rightRanges: {x: 0, y: 0.4}
+      succeededCheck: 0
+    - blendName: Brow Outer Ups
+      leftRanges: {x: 0, y: 0.2}
+      rightRanges: {x: 0, y: 0.2}
+      succeededCheck: 0
+    - blendName: Brow Inner Ups
+      leftRanges: {x: 0.1, y: 0.4}
+      rightRanges: {x: 0.1, y: 0.4}
+      succeededCheck: 0
+    - blendName: Eyelid
+      leftRanges: {x: -0.5, y: -0.2}
+      rightRanges: {x: -0.5, y: -0.2}
+      succeededCheck: 0
+    requiredEmote: 0
+    isGood: 0
+  - eventName: Scientist
+    acceptableRanges:
+    - blendName: Brow Inner Ups
+      leftRanges: {x: -0.3, y: -0.1}
+      rightRanges: {x: -0.3, y: -0.1}
+      succeededCheck: 0
+    - blendName: Brow Outer Ups
+      leftRanges: {x: -0.5, y: 0}
+      rightRanges: {x: -0.5, y: 0}
+      succeededCheck: 0
+    - blendName: Mouth Ups
+      leftRanges: {x: -0.2, y: 0}
+      rightRanges: {x: -0.2, y: 0}
+      succeededCheck: 0
+    requiredEmote: 0
+    isGood: 0
+  - eventName: Security Guard
+    acceptableRanges:
+    - blendName: Eye
+      leftRanges: {x: -1, y: -1}
+      rightRanges: {x: 1, y: 1}
+      succeededCheck: 0
+    - blendName: Eye
+      leftRanges: {x: 1, y: 1}
+      rightRanges: {x: -1, y: -1}
+      succeededCheck: 0
+    requiredEmote: 0
+    isGood: 0
+  - eventName: Soldier
+    acceptableRanges:
+    - blendName: Brow Outer Ups
+      leftRanges: {x: 0.1, y: 0.3}
+      rightRanges: {x: 0.1, y: 0.3}
+      succeededCheck: 0
+    - blendName: Brow Inner Ups
+      leftRanges: {x: 0.2, y: 0.6}
+      rightRanges: {x: 0.2, y: 0.6}
+      succeededCheck: 0
+    - blendName: Eyelid
+      leftRanges: {x: -0.9, y: -0.4}
+      rightRanges: {x: -0.9, y: -0.4}
+      succeededCheck: 0
+    - blendName: Mouth Ups
+      leftRanges: {x: -0.4, y: -0.1}
+      rightRanges: {x: -0.4, y: -0.1}
+      succeededCheck: 0
+    - blendName: Mouth
+      leftRanges: {x: 1, y: 1}
+      rightRanges: {x: 1, y: 1}
+      succeededCheck: 0
+    requiredEmote: 1
+    isGood: 0
+  - eventName: Head of Security
+    acceptableRanges:
+    - blendName: Mouth Ups
+      leftRanges: {x: 0.1, y: 0.5}
+      rightRanges: {x: 0.1, y: 0.5}
+      succeededCheck: 0
+    - blendName: Mouth sides
+      leftRanges: {x: -0.1, y: 0.5}
+      rightRanges: {x: -0.1, y: 0.5}
+      succeededCheck: 0
+    requiredEmote: 0
+    isGood: 0
+  - eventName: Scientist
+    acceptableRanges:
+    - blendName: Brow Inner Ups
+      leftRanges: {x: -0.5, y: -0.3}
+      rightRanges: {x: -0.5, y: -0.3}
+      succeededCheck: 0
+    - blendName: Brow Outer Sides
+      leftRanges: {x: 0, y: 0.5}
+      rightRanges: {x: 0, y: 0.5}
+      succeededCheck: 0
+    - blendName: Eyelid
+      leftRanges: {x: 0.5, y: 0.7}
+      rightRanges: {x: 0.5, y: 0.7}
+      succeededCheck: 0
+    - blendName: Mouth Ups
+      leftRanges: {x: -0.4, y: -0.1}
+      rightRanges: {x: -0.4, y: -0.1}
+      succeededCheck: 0
+    - blendName: 'Mouth '
+      leftRanges: {x: 1, y: 1}
+      rightRanges: {x: 1, y: 1}
+      succeededCheck: 0
+    requiredEmote: 1
+    isGood: 0
+  - eventName: Girlfriend
+    acceptableRanges:
+    - blendName: Mouth Ups
+      leftRanges: {x: 0.1, y: 0.4}
+      rightRanges: {x: 0.1, y: 0.4}
+      succeededCheck: 0
+    - blendName: Mouth sides
+      leftRanges: {x: 0, y: 0.4}
+      rightRanges: {x: 0, y: 0.4}
+      succeededCheck: 0
+    - blendName: Brow Outer Ups
+      leftRanges: {x: 0, y: 0.2}
+      rightRanges: {x: 0, y: 0.2}
+      succeededCheck: 0
+    - blendName: Brow Inner Ups
+      leftRanges: {x: 0.1, y: 0.4}
+      rightRanges: {x: 0.1, y: 0.4}
+      succeededCheck: 0
+    - blendName: Eyelid
+      leftRanges: {x: -0.5, y: -0.2}
+      rightRanges: {x: -0.5, y: -0.2}
+      succeededCheck: 0
+    - blendName: Mouth
+      leftRanges: {x: 1, y: 1}
+      rightRanges: {x: 1, y: 1}
+      succeededCheck: 0
+    requiredEmote: 0
+    isGood: 0
+  - eventName: Girlfriend
+    acceptableRanges:
+    - blendName: Eyelid
+      leftRanges: {x: 0.9, y: 1}
+      rightRanges: {x: -0.5, y: 0}
+      succeededCheck: 0
+    - blendName: Eyelid
+      leftRanges: {x: -0.5, y: 0}
+      rightRanges: {x: 0.9, y: 1}
+      succeededCheck: 0
+    - blendName: Mouth Ups
+      leftRanges: {x: 0.1, y: 0.5}
+      rightRanges: {x: 0.1, y: 0.5}
+      succeededCheck: 0
+    - blendName: Mouth sides
+      leftRanges: {x: -0.1, y: 0.5}
+      rightRanges: {x: -0.1, y: 0.5}
+      succeededCheck: 0
+    - blendName: 'Mouth '
+      leftRanges: {x: 1, y: 1}
+      rightRanges: {x: 1, y: 1}
+      succeededCheck: 0
+    requiredEmote: 0
+    isGood: 0
+  eventIndex: -1
+  skin: {fileID: 0}
+  printDebug: 1
+--- !u!114 &2623337604092919563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8799331657185901786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 985a595d0f6eab04493600ea4cbc8d43, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Gamepad
+  m_DefaultActionMap: f0f8b663-4531-4385-8415-a72778c3426e
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}

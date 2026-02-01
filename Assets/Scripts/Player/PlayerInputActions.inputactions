@@ -790,7 +790,7 @@
             "actions": [
                 {
                     "name": "LeftStick",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "b739b3e4-a51b-44a1-97e5-69740497a82c",
                     "expectedControlType": "Vector2",
                     "processors": "",
@@ -799,7 +799,7 @@
                 },
                 {
                     "name": "RightStick",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "0cebd8c7-8441-4bcb-baf7-0fb24d05d5a5",
                     "expectedControlType": "Vector2",
                     "processors": "",
@@ -807,19 +807,73 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "LeftTrigger",
-                    "type": "Value",
+                    "name": "Eyebrow outer",
+                    "type": "Button",
                     "id": "e1ec8568-e3f8-40cb-a4ed-1eff1aa63d70",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
                 },
                 {
-                    "name": "RightTrigger",
-                    "type": "Value",
+                    "name": "Eyebrow Inner",
+                    "type": "Button",
                     "id": "fad2b67f-5ed6-48d1-9dc7-889ee7ec49ef",
-                    "expectedControlType": "Axis",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Eyelids",
+                    "type": "Button",
+                    "id": "37a1e02f-0f36-429b-be62-170a867b6dc3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Eyes",
+                    "type": "Button",
+                    "id": "6662bacf-ee5b-47ce-9aa9-0a5da3d8049b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Open Mouth",
+                    "type": "Button",
+                    "id": "8b6c82db-d89f-47b6-af53-f881dd3598da",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Shrug",
+                    "type": "Button",
+                    "id": "e8af7de0-e26f-4855-9b30-4459d744814d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Nod",
+                    "type": "Button",
+                    "id": "ec756643-1bdb-4ac3-920e-105d66d22a74",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Head shake",
+                    "type": "Button",
+                    "id": "9ef16c2c-ef52-4470-9816-cd366783024c",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -832,7 +886,7 @@
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Gamepad",
                     "action": "LeftStick",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -843,7 +897,7 @@
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": ";Gamepad",
                     "action": "RightStick",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -851,22 +905,88 @@
                 {
                     "name": "",
                     "id": "a2213d86-e1fa-4bdb-a2db-0a59b123b15b",
-                    "path": "<Gamepad>/leftTrigger",
+                    "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "LeftTrigger",
+                    "groups": ";Gamepad",
+                    "action": "Eyebrow outer",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "94365769-1004-4de9-8043-a2985d89c2e3",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Eyebrow Inner",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a4ec101-a38e-49ae-9971-ea1e8f2fb963",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Eyelids",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c525b5e0-e77e-4388-8433-55b640bd546d",
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "RightTrigger",
+                    "groups": ";Gamepad",
+                    "action": "Eyes",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f4689c3d-3f10-433d-ac35-ca2b283c2f5f",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Open Mouth",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ded7e1c7-1b42-4215-b4db-0d5c88e49680",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Shrug",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d45e590b-9106-400f-b943-1f6bf8c16ccd",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Nod",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e5fc4148-23bb-415b-83e8-7a15752503e3",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Head shake",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
