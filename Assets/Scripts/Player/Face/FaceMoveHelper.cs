@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -6,6 +7,7 @@ public class FaceMoveHelper : MonoBehaviour
 {
     #region Variables
     [SerializeField] private FaceBlendShapes faceBlend;
+    public static Action<bool> onCheckEvent;
     public FaceChecker faceChecker;
     #endregion
 
@@ -38,7 +40,7 @@ public class FaceMoveHelper : MonoBehaviour
     }
 
     public void Emote(InputAction activeAction, Emotes emote)
-    {
+    {        
         if (emote == Emotes.OpenMouth)
         {
             faceBlend.OpenMouth(activeAction.ReadValue<float>());
@@ -46,17 +48,17 @@ public class FaceMoveHelper : MonoBehaviour
         if (emote == Emotes.Shrug)
         {
             faceBlend.Shrug(activeAction.ReadValue<float>());
-            faceChecker.CheckNextEvent(emote);
+            onCheckEvent?.Invoke(faceChecker.CheckNextEvent(emote));
         }
         if (emote == Emotes.Nod)
         {
             faceBlend.Nod(activeAction.ReadValue<float>());
-            faceChecker.CheckNextEvent(emote);
+            onCheckEvent?.Invoke(faceChecker.CheckNextEvent(emote));
         }
         if (emote == Emotes.Headshake)
         {
             faceBlend.Headshake(activeAction.ReadValue<float>());
-            faceChecker.CheckNextEvent(emote);
+            onCheckEvent?.Invoke(faceChecker.CheckNextEvent(emote));
         }
     }
     public void ResetEmote(InputAction activeAction, Emotes emote)

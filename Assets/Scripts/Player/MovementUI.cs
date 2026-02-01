@@ -5,14 +5,15 @@ public class MovementUI : MonoBehaviour
 {
     public GameObject forwardArrow, backwardsArrow, rightArrow, leftArrow;
     private void OnEnable() {
+        OnDisable();
         Movement.onMoveCompleted += UpdateDirectionsUI;
         Movement.onMoveStarted += HideDirectionsUI;
         EventTrigger.onEventTriggered += _ => HideDirectionsUI();
     }
     private void OnDisable()
     {
-        Movement.onMoveCompleted += UpdateDirectionsUI;
-        Movement.onMoveStarted += HideDirectionsUI;
+        Movement.onMoveCompleted -= UpdateDirectionsUI;
+        Movement.onMoveStarted -= HideDirectionsUI;
         EventTrigger.onEventTriggered -= _ => HideDirectionsUI();
     }
     private void HideDirectionsUI()

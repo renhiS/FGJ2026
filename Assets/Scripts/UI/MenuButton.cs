@@ -22,6 +22,11 @@ public class MenuButton : MonoBehaviour, ISelectHandler, IPointerEnterHandler
 
     public void Play()
     {
+        GameManager.LoadScene(1);
+    }
+
+    public void Menu()
+    {
         GameManager.LoadScene(0);
     }
 

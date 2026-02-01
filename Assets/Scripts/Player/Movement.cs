@@ -33,12 +33,16 @@ public class Movement : MonoBehaviour
 
     private void OnEnable()
     {
+        inputActions.Player.Disable();
         inputActions.Player.Enable();
+        inputActions.Player.Move.performed -= OnMovePerformed;
+        EventTrigger.onEndEvent -= _ => StartCoroutine(EnableInputsCoroutine()); 
         inputActions.Player.Move.performed += OnMovePerformed;    
         EventTrigger.onEndEvent += _ => StartCoroutine(EnableInputsCoroutine());    
     }
     void OnDisable()
     {
+        inputActions.Player.Disable();
         inputActions.Player.Move.performed -= OnMovePerformed;
         EventTrigger.onEndEvent -= _ => StartCoroutine(EnableInputsCoroutine());    
     }

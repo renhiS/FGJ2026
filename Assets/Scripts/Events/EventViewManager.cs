@@ -9,6 +9,8 @@ public class EventViewManager : MonoBehaviour
     private float moveSpeed = 0.65f;
 
     private void OnEnable() {
+        EventTrigger.onEventTriggered -= _ => StartEvent();
+        EventTrigger.onEndEvent -= _ => EndEvent();
         EventTrigger.onEventTriggered += _ => StartEvent();
         EventTrigger.onEndEvent += _ => EndEvent();
     }

@@ -6,6 +6,7 @@ public class PlayerSounds : MonoBehaviour
     public AudioClip[] stepSounds;
 
     private void OnEnable() {
+        Movement.onMoveStarted -= () => PlaySound(stepSounds);
         Movement.onMoveStarted += () => PlaySound(stepSounds);
     }
 

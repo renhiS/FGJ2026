@@ -36,6 +36,8 @@ public class FaceChecker : MonoBehaviour
     public SkinnedMeshRenderer skin;
     public bool printDebug;
 
+    public static FaceEvent curEvent;
+
     void Start()
     {
         if (printDebug)
@@ -76,8 +78,7 @@ public class FaceChecker : MonoBehaviour
         {
             return false;
         }
-
-        FaceEvent curEvent = faceEvents[index];
+        
 
         if (curEvent.acceptableRanges.Count < 1)
         {
@@ -88,8 +89,12 @@ public class FaceChecker : MonoBehaviour
 
         Mesh skinMesh = skin.sharedMesh;
 
+        bool allPass = true;
+
         for (int i = 0; i < curEvent.acceptableRanges.Count; i++)
         {
+            bool currentPass = false;
+
             AcceptableRange checks = curEvent.acceptableRanges[i];
             for(int j = 0; j < skinMesh.blendShapeCount; j++)
             {
@@ -102,6 +107,7 @@ public class FaceChecker : MonoBehaviour
                         if (blend >= (checks.leftRanges.x * 100) && blend <= (checks.leftRanges.y * 100))
                         {
                             checks.succeededCheck = true;
+                            currentPass = true;
                         }
                         else
                         {
@@ -114,6 +120,7 @@ public class FaceChecker : MonoBehaviour
                         if (blend >= (checks.rightRanges.x * 100) && (blend <= checks.rightRanges.y * 100))
                         {
                             checks.succeededCheck = true;
+                            currentPass = true;
                         }
                         else
                         {
@@ -126,6 +133,7 @@ public class FaceChecker : MonoBehaviour
                         if (blend >= (checks.leftRanges.x * 100) && blend <= (checks.leftRanges.y * 100) && blend >= (checks.rightRanges.x * 100) && blend <= (checks.rightRanges.y * 100))
                         {
                             checks.succeededCheck = true;
+                            currentPass = true;
                         }
                         else
                         {
@@ -135,6 +143,11 @@ public class FaceChecker : MonoBehaviour
                     }
                 }
             }
+
+            if (!currentPass)
+            {
+                allPass = false;
+            }
         }
 
         if ((int)emoteSender != (int)curEvent.requiredEmote)
@@ -143,8 +156,7 @@ public class FaceChecker : MonoBehaviour
             return false;
         }
 
-        curEvent.isGood = true;
-
-        return true;
+        curEvent.isGood = allPass;
+        return allPass;
     }
 }

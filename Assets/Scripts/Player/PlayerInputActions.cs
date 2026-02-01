@@ -869,6 +869,214 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Face"",
+            ""id"": ""141521de-2a03-49cd-acbd-2c536a72e907"",
+            ""actions"": [
+                {
+                    ""name"": ""LeftStick"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""b739b3e4-a51b-44a1-97e5-69740497a82c"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""RightStick"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""0cebd8c7-8441-4bcb-baf7-0fb24d05d5a5"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Eyebrow outer"",
+                    ""type"": ""Button"",
+                    ""id"": ""e1ec8568-e3f8-40cb-a4ed-1eff1aa63d70"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Eyebrow Inner"",
+                    ""type"": ""Button"",
+                    ""id"": ""fad2b67f-5ed6-48d1-9dc7-889ee7ec49ef"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Eyelids"",
+                    ""type"": ""Button"",
+                    ""id"": ""37a1e02f-0f36-429b-be62-170a867b6dc3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Eyes"",
+                    ""type"": ""Button"",
+                    ""id"": ""6662bacf-ee5b-47ce-9aa9-0a5da3d8049b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Open Mouth"",
+                    ""type"": ""Button"",
+                    ""id"": ""8b6c82db-d89f-47b6-af53-f881dd3598da"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Shrug"",
+                    ""type"": ""Button"",
+                    ""id"": ""e8af7de0-e26f-4855-9b30-4459d744814d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Nod"",
+                    ""type"": ""Button"",
+                    ""id"": ""ec756643-1bdb-4ac3-920e-105d66d22a74"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Head shake"",
+                    ""type"": ""Button"",
+                    ""id"": ""9ef16c2c-ef52-4470-9816-cd366783024c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""ba11d5f2-1c50-47f1-b3d0-49dfb653d3c5"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""LeftStick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bfbb196d-1e0f-4d51-8c09-2b2ab1051273"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""RightStick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a2213d86-e1fa-4bdb-a2db-0a59b123b15b"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Eyebrow outer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""94365769-1004-4de9-8043-a2985d89c2e3"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Eyebrow Inner"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3a4ec101-a38e-49ae-9971-ea1e8f2fb963"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Eyelids"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c525b5e0-e77e-4388-8433-55b640bd546d"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Eyes"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f4689c3d-3f10-433d-ac35-ca2b283c2f5f"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Open Mouth"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ded7e1c7-1b42-4215-b4db-0d5c88e49680"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Shrug"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d45e590b-9106-400f-b943-1f6bf8c16ccd"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Nod"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e5fc4148-23bb-415b-83e8-7a15752503e3"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad"",
+                    ""action"": ""Head shake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -951,12 +1159,25 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_UI_RightClick = m_UI.FindAction("RightClick", throwIfNotFound: true);
         m_UI_TrackedDevicePosition = m_UI.FindAction("TrackedDevicePosition", throwIfNotFound: true);
         m_UI_TrackedDeviceOrientation = m_UI.FindAction("TrackedDeviceOrientation", throwIfNotFound: true);
+        // Face
+        m_Face = asset.FindActionMap("Face", throwIfNotFound: true);
+        m_Face_LeftStick = m_Face.FindAction("LeftStick", throwIfNotFound: true);
+        m_Face_RightStick = m_Face.FindAction("RightStick", throwIfNotFound: true);
+        m_Face_Eyebrowouter = m_Face.FindAction("Eyebrow outer", throwIfNotFound: true);
+        m_Face_EyebrowInner = m_Face.FindAction("Eyebrow Inner", throwIfNotFound: true);
+        m_Face_Eyelids = m_Face.FindAction("Eyelids", throwIfNotFound: true);
+        m_Face_Eyes = m_Face.FindAction("Eyes", throwIfNotFound: true);
+        m_Face_OpenMouth = m_Face.FindAction("Open Mouth", throwIfNotFound: true);
+        m_Face_Shrug = m_Face.FindAction("Shrug", throwIfNotFound: true);
+        m_Face_Nod = m_Face.FindAction("Nod", throwIfNotFound: true);
+        m_Face_Headshake = m_Face.FindAction("Head shake", throwIfNotFound: true);
     }
 
     ~@PlayerInputActions()
     {
         UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, PlayerInputActions.Player.Disable() has not been called.");
         UnityEngine.Debug.Assert(!m_UI.enabled, "This will cause a leak and performance issues, PlayerInputActions.UI.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Face.enabled, "This will cause a leak and performance issues, PlayerInputActions.Face.Disable() has not been called.");
     }
 
     /// <summary>
@@ -1341,6 +1562,201 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="UIActions" /> instance referencing this action map.
     /// </summary>
     public UIActions @UI => new UIActions(this);
+
+    // Face
+    private readonly InputActionMap m_Face;
+    private List<IFaceActions> m_FaceActionsCallbackInterfaces = new List<IFaceActions>();
+    private readonly InputAction m_Face_LeftStick;
+    private readonly InputAction m_Face_RightStick;
+    private readonly InputAction m_Face_Eyebrowouter;
+    private readonly InputAction m_Face_EyebrowInner;
+    private readonly InputAction m_Face_Eyelids;
+    private readonly InputAction m_Face_Eyes;
+    private readonly InputAction m_Face_OpenMouth;
+    private readonly InputAction m_Face_Shrug;
+    private readonly InputAction m_Face_Nod;
+    private readonly InputAction m_Face_Headshake;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Face".
+    /// </summary>
+    public struct FaceActions
+    {
+        private @PlayerInputActions m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public FaceActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Face/LeftStick".
+        /// </summary>
+        public InputAction @LeftStick => m_Wrapper.m_Face_LeftStick;
+        /// <summary>
+        /// Provides access to the underlying input action "Face/RightStick".
+        /// </summary>
+        public InputAction @RightStick => m_Wrapper.m_Face_RightStick;
+        /// <summary>
+        /// Provides access to the underlying input action "Face/Eyebrowouter".
+        /// </summary>
+        public InputAction @Eyebrowouter => m_Wrapper.m_Face_Eyebrowouter;
+        /// <summary>
+        /// Provides access to the underlying input action "Face/EyebrowInner".
+        /// </summary>
+        public InputAction @EyebrowInner => m_Wrapper.m_Face_EyebrowInner;
+        /// <summary>
+        /// Provides access to the underlying input action "Face/Eyelids".
+        /// </summary>
+        public InputAction @Eyelids => m_Wrapper.m_Face_Eyelids;
+        /// <summary>
+        /// Provides access to the underlying input action "Face/Eyes".
+        /// </summary>
+        public InputAction @Eyes => m_Wrapper.m_Face_Eyes;
+        /// <summary>
+        /// Provides access to the underlying input action "Face/OpenMouth".
+        /// </summary>
+        public InputAction @OpenMouth => m_Wrapper.m_Face_OpenMouth;
+        /// <summary>
+        /// Provides access to the underlying input action "Face/Shrug".
+        /// </summary>
+        public InputAction @Shrug => m_Wrapper.m_Face_Shrug;
+        /// <summary>
+        /// Provides access to the underlying input action "Face/Nod".
+        /// </summary>
+        public InputAction @Nod => m_Wrapper.m_Face_Nod;
+        /// <summary>
+        /// Provides access to the underlying input action "Face/Headshake".
+        /// </summary>
+        public InputAction @Headshake => m_Wrapper.m_Face_Headshake;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Face; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="FaceActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(FaceActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="FaceActions" />
+        public void AddCallbacks(IFaceActions instance)
+        {
+            if (instance == null || m_Wrapper.m_FaceActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_FaceActionsCallbackInterfaces.Add(instance);
+            @LeftStick.started += instance.OnLeftStick;
+            @LeftStick.performed += instance.OnLeftStick;
+            @LeftStick.canceled += instance.OnLeftStick;
+            @RightStick.started += instance.OnRightStick;
+            @RightStick.performed += instance.OnRightStick;
+            @RightStick.canceled += instance.OnRightStick;
+            @Eyebrowouter.started += instance.OnEyebrowouter;
+            @Eyebrowouter.performed += instance.OnEyebrowouter;
+            @Eyebrowouter.canceled += instance.OnEyebrowouter;
+            @EyebrowInner.started += instance.OnEyebrowInner;
+            @EyebrowInner.performed += instance.OnEyebrowInner;
+            @EyebrowInner.canceled += instance.OnEyebrowInner;
+            @Eyelids.started += instance.OnEyelids;
+            @Eyelids.performed += instance.OnEyelids;
+            @Eyelids.canceled += instance.OnEyelids;
+            @Eyes.started += instance.OnEyes;
+            @Eyes.performed += instance.OnEyes;
+            @Eyes.canceled += instance.OnEyes;
+            @OpenMouth.started += instance.OnOpenMouth;
+            @OpenMouth.performed += instance.OnOpenMouth;
+            @OpenMouth.canceled += instance.OnOpenMouth;
+            @Shrug.started += instance.OnShrug;
+            @Shrug.performed += instance.OnShrug;
+            @Shrug.canceled += instance.OnShrug;
+            @Nod.started += instance.OnNod;
+            @Nod.performed += instance.OnNod;
+            @Nod.canceled += instance.OnNod;
+            @Headshake.started += instance.OnHeadshake;
+            @Headshake.performed += instance.OnHeadshake;
+            @Headshake.canceled += instance.OnHeadshake;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="FaceActions" />
+        private void UnregisterCallbacks(IFaceActions instance)
+        {
+            @LeftStick.started -= instance.OnLeftStick;
+            @LeftStick.performed -= instance.OnLeftStick;
+            @LeftStick.canceled -= instance.OnLeftStick;
+            @RightStick.started -= instance.OnRightStick;
+            @RightStick.performed -= instance.OnRightStick;
+            @RightStick.canceled -= instance.OnRightStick;
+            @Eyebrowouter.started -= instance.OnEyebrowouter;
+            @Eyebrowouter.performed -= instance.OnEyebrowouter;
+            @Eyebrowouter.canceled -= instance.OnEyebrowouter;
+            @EyebrowInner.started -= instance.OnEyebrowInner;
+            @EyebrowInner.performed -= instance.OnEyebrowInner;
+            @EyebrowInner.canceled -= instance.OnEyebrowInner;
+            @Eyelids.started -= instance.OnEyelids;
+            @Eyelids.performed -= instance.OnEyelids;
+            @Eyelids.canceled -= instance.OnEyelids;
+            @Eyes.started -= instance.OnEyes;
+            @Eyes.performed -= instance.OnEyes;
+            @Eyes.canceled -= instance.OnEyes;
+            @OpenMouth.started -= instance.OnOpenMouth;
+            @OpenMouth.performed -= instance.OnOpenMouth;
+            @OpenMouth.canceled -= instance.OnOpenMouth;
+            @Shrug.started -= instance.OnShrug;
+            @Shrug.performed -= instance.OnShrug;
+            @Shrug.canceled -= instance.OnShrug;
+            @Nod.started -= instance.OnNod;
+            @Nod.performed -= instance.OnNod;
+            @Nod.canceled -= instance.OnNod;
+            @Headshake.started -= instance.OnHeadshake;
+            @Headshake.performed -= instance.OnHeadshake;
+            @Headshake.canceled -= instance.OnHeadshake;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="FaceActions.UnregisterCallbacks(IFaceActions)" />.
+        /// </summary>
+        /// <seealso cref="FaceActions.UnregisterCallbacks(IFaceActions)" />
+        public void RemoveCallbacks(IFaceActions instance)
+        {
+            if (m_Wrapper.m_FaceActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="FaceActions.AddCallbacks(IFaceActions)" />
+        /// <seealso cref="FaceActions.RemoveCallbacks(IFaceActions)" />
+        /// <seealso cref="FaceActions.UnregisterCallbacks(IFaceActions)" />
+        public void SetCallbacks(IFaceActions instance)
+        {
+            foreach (var item in m_Wrapper.m_FaceActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_FaceActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="FaceActions" /> instance referencing this action map.
+    /// </summary>
+    public FaceActions @Face => new FaceActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     /// <summary>
     /// Provides access to the input control scheme.
@@ -1512,5 +1928,83 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnTrackedDeviceOrientation(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Face" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="FaceActions.AddCallbacks(IFaceActions)" />
+    /// <seealso cref="FaceActions.RemoveCallbacks(IFaceActions)" />
+    public interface IFaceActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "LeftStick" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLeftStick(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "RightStick" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRightStick(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Eyebrow outer" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnEyebrowouter(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Eyebrow Inner" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnEyebrowInner(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Eyelids" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnEyelids(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Eyes" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnEyes(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Open Mouth" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnOpenMouth(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Shrug" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnShrug(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Nod" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnNod(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Head shake" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnHeadshake(InputAction.CallbackContext context);
     }
 }

@@ -11,6 +11,7 @@ public class SkinDegradationManager : MonoBehaviour
         skinMaterial.SetTexture("_BaseMap", stageOne); 
     }
     private void OnEnable() {
+        EventTrigger.onEndEvent -= stateParam => {if(stateParam == EndState.failure) DegradeSkin();};
         EventTrigger.onEndEvent += stateParam => {if(stateParam == EndState.failure) DegradeSkin();};
     }
 

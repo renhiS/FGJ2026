@@ -5,10 +5,11 @@ using DG.Tweening;
 
 public class EventTrigger : MonoBehaviour
 {
+    public FaceEvent faceEvent;
     public Transform character;
     public Animator animator;
     public AudioSource voiceAudioSource;
-    private static float distanceThreshold = 6f;
+    private static float distanceThreshold = 5f;
     public static Action<EventTrigger> onEventTriggered;
     private bool hasTriggered;
     public static Action<EndState> onEndEvent;
@@ -32,13 +33,14 @@ public class EventTrigger : MonoBehaviour
         yield return new WaitForEndOfFrame();
         
         if(animator)animator.enabled = true;
+        FaceChecker.curEvent = faceEvent;
         voiceAudioSource.Play();
         hasTriggered = true;
         onEventTriggered?.Invoke(this);
         Movement.InputActions.Player.Disable();
         Vector3 characterPos = GetCharacterMovePos();
-        Quaternion  rot = Quaternion.LookRotation(Movement.Position - transform.position);
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x, rot.y, transform.eulerAngles.z);        
+        transform.LookAt(Movement.Position);
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0); 
         transform.DOMove(characterPos, 0.5f);
     }
 
